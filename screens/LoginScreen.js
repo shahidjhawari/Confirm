@@ -4,7 +4,7 @@ import { View, Text, TextInput, TouchableOpacity, Image, StyleSheet, ImageBackgr
 const LoginScreen = () => {
   return (
     <ImageBackground 
-      source={require('../assets/images/background.jpg')}  // Adjust the path if needed
+      source={require('../assets/images/background_splash.jpg')}  // Adjust the path if needed
       style={styles.background}
     >
       <View style={styles.container}>

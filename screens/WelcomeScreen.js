@@ -4,7 +4,7 @@ import { View, Text, Button, StyleSheet, ImageBackground } from 'react-native';
 const WelcomeScreen = ({ navigation }) => {
   return (
     <ImageBackground
-      source={require('../assets/images/background_splash.jpg')} // Ensure this path is correct
+      source={require('../assets/images/background_splash.jpg')}
       style={styles.background}
     >
       <View style={styles.container}>
@@ -30,6 +30,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     color: '#ffffff',
     marginBottom: 20,
+    fontFamily: 'Impact', // Set your custom font here
   },
 });
 
