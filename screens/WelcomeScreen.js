@@ -8,8 +8,8 @@ const WelcomeScreen = ({ navigation }) => {
       style={styles.background}
     >
       <View style={styles.container}>
-        <Text style={styles.welcomeText}>Welcome to the App</Text>
-        <Button title="Go to Login" onPress={() => navigation.navigate('Login')} />
+        <Text style={styles.welcomeText}>Welcome to Mishicoin</Text>
+        <Button title="START" onPress={() => navigation.navigate('Login')} />
       </View>
     </ImageBackground>
   );
