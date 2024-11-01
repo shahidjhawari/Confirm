@@ -1,32 +1,41 @@
 import React from 'react';
-import { View, Text, TextInput, TouchableOpacity, Image, StyleSheet } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, Image, StyleSheet, ImageBackground } from 'react-native';
 
 const LoginScreen = () => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Welcome back</Text>
-      <TextInput style={styles.input} placeholder="Your email" placeholderTextColor="#ccc" />
-      <TextInput style={styles.input} placeholder="Password" placeholderTextColor="#ccc" secureTextEntry />
-      <Text style={styles.forgotPassword}>Forgot password</Text>
-      <TouchableOpacity style={styles.signInButton}>
-        <Text style={styles.signInButtonText}>Sign in</Text>
-      </TouchableOpacity>
-      <Text style={styles.orText}>Or</Text>
-      <View style={styles.socialContainer}>
-        <Image source={{ uri: 'https://upload.wikimedia.org/wikipedia/commons/0/09/Google_Plus_logo_2015.png' }} style={styles.socialIcon} />
-        <Image source={{ uri: 'https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png' }} style={styles.socialIcon} />
+    <ImageBackground 
+      source={require('../assets/images/background.jpg')}  // Adjust the path if needed
+      style={styles.background}
+    >
+      <View style={styles.container}>
+        <Text style={styles.title}>Welcome back</Text>
+        <TextInput style={styles.input} placeholder="Your email" placeholderTextColor="#ccc" />
+        <TextInput style={styles.input} placeholder="Password" placeholderTextColor="#ccc" secureTextEntry />
+        <Text style={styles.forgotPassword}>Forgot password</Text>
+        <TouchableOpacity style={styles.signInButton}>
+          <Text style={styles.signInButtonText}>Sign in</Text>
+        </TouchableOpacity>
+        <Text style={styles.orText}>Or</Text>
+        <View style={styles.socialContainer}>
+          <Image source={require('../assets/images/google_logo.png')} style={styles.socialIcon} />
+          <Image source={require('../assets/images/facebook_logo.png')} style={styles.socialIcon} />
+        </View>
       </View>
-    </View>
+    </ImageBackground>
   );
 };
 
 const styles = StyleSheet.create({
+  background: {
+    flex: 1,
+    resizeMode: 'cover', // Ensures the image covers the screen
+  },
   container: {
     flex: 1,
-    backgroundColor: '#0f0f0f',
     alignItems: 'center',
     justifyContent: 'center',
     paddingHorizontal: 20,
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',  // Optional: adds a dark overlay for better readability
   },
   title: {
     fontSize: 24,
@@ -69,6 +78,7 @@ const styles = StyleSheet.create({
   socialIcon: {
     width: 40,
     height: 40,
+    resizeMode: 'contain',
   },
 });
 
