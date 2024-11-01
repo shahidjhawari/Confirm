@@ -4,7 +4,7 @@ import { View, Text, Button, StyleSheet, ImageBackground } from 'react-native';
 const WelcomeScreen = ({ navigation }) => {
   return (
     <ImageBackground
-      source={require('../assets/images/background_splash.png')} // Ensure this path is correct
+      source={require('../assets/images/background_splash.jpg')} // Ensure this path is correct
       style={styles.background}
     >
       <View style={styles.container}>
